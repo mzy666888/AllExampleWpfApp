@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>AllExampleWpfApp</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="D:\nuget\packages\nlog.config\4.7.12\contentFiles\any\any\NLog.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="DryIoc.dll" Version="4.8.4" />
+    <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="5.1.0" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.3" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="NLog" Version="4.7.12" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
+    <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+    <PackageReference Include="StackExchange.Redis" Version="2.2.79" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AllExampleWpfApp.Core\AllExampleWpfApp.Core.csproj" />
+    <ProjectReference Include="..\Modules\AllExampleWpfApp.Modules.ModuleName\AllExampleWpfApp.Modules.ModuleName.csproj" />
+    <ProjectReference Include="..\Modules\ChromeTabsModule\ChromeTabsModule.csproj" />
+    <ProjectReference Include="..\Modules\FilterDataGridModule\FilterDataGridModule.csproj" />
+    <ProjectReference Include="..\Services\AllExampleWpfApp.Services.Interfaces\AllExampleWpfApp.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Services\AllExampleWpfApp.Services\AllExampleWpfApp.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="AppSetting.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="products.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
